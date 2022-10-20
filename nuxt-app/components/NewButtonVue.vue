@@ -3,17 +3,11 @@
   {{ message }}
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      message: "",
-    };
-  },
-  methods: {
-    hello() {
-      this.message = "hello";
-    },
-  },
+<script setup>
+const message = ref("no helo");
+
+const hello = () => {
+  console.log('hello')
+  message.value = 'hello'
 };
 </script>

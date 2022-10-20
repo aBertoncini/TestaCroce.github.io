@@ -4,9 +4,10 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "@/assets/_color.scss" as *;',
+          //additionalData: '@use "@/assets/bootstrap/bsStyle.scss" as *;',
         },
       },
     },
   },
+  css: ["@/assets/_color.scss"]
 });
