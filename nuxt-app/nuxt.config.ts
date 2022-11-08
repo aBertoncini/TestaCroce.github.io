@@ -1,4 +1,4 @@
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
+/* // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   vite: {
     css: {
@@ -10,7 +10,12 @@ export default defineNuxtConfig({
     },
   },
   css: ["@/assets/main.scss"],
-  scripts: [
-    
-  ]
+  //script: [{ src: `/bootstrap.bundle.min.js` }, { src: "/hello.js" }],
+  head: {
+    title: "Prova Nuxt",
+    script: [
+      { src: "/bootstrap.bundle.min.js" },
+    ],
+  },
 });
+ */

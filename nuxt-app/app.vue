@@ -1,24 +1,17 @@
-<script setup lang="ts">
-const route = useRoute();
-</script>
-
 <template>
-  <NuxtPage></NuxtPage>
-<!--   <NuxtExampleLayout example="routing/pages">
-    <NuxtLoadingIndicator />
-    <NuxtPage />
-
-    <template #nav>
-      <nav class="flex align-center gap-4 p-4">
-        <NuxtLink to="/" class="n-link-base"> Home </NuxtLink>
-        <NuxtLink to="/about" class="n-link-base"> About </NuxtLink>
-      </nav>
-    </template>
-
-    <template #footer>
-      <div class="text-center p-4 op-50">
-        Current route: <code>{{ route.path }}</code>
-      </div>
-    </template>
-  </NuxtExampleLayout> -->
+  <NuxtPage />
 </template>
+<script>
+export default {
+  head() {
+    return {
+      title: "nuxt app prova",
+    };
+  },
+  /* body() {
+    return {
+      script: [{ src: "./static/bootstrap.bundle.min.js" }],
+    };
+  }, */
+};
+</script>
