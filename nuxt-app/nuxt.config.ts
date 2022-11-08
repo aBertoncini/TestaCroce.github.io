@@ -9,5 +9,8 @@ export default defineNuxtConfig({
       },
     },
   },
-  css: ["@/assets/_color.scss"]
+  css: ["@/assets/main.scss"],
+  scripts: [
+    
+  ]
 });

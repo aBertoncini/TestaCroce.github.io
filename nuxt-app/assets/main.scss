@@ -1,0 +1,103 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+//@import url("https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css");
+@import "functions";
+
+/* 
+!! da importare nel file index.html !! 
+
+!! non dimenticarsi tag responsive in index.html
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+!! se si usa bootstrap
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+ */
+
+//colori simil-anagrafica + arancio
+/* $c1: #ff9f1c;
+$c2: #ffbf69;
+$c3: #ffffff;
+$c4: #a6d4d6;
+$c5: #27ccd2;
+$c6: #0c7284;
+$c7: #f6fbff;
+$c8: #f0fbfc; //bg color
+$c9: #b8c5c5; //resource + paused
+$transparent: #00000000; */
+
+// !!! BUTTONS !!!
+$c-btn-bg: #ffbf69;
+$c-btn-border: #ffbf69;
+$c-btn-font: #ffffff;
+$c-btn-bg-active: darken($c-btn-bg, 20%);
+$c-btn-border-active: darken($c-btn-bg, 20%);
+$c-btn-font-active: $c-btn-font;
+
+.btn,
+.button {
+  background-color: $c-btn-bg; //colore di sfondo
+  border: 0.125em solid $c-btn-border;
+  color: $c-btn-font;
+  border-radius: 6px;
+  transition: ease 0.25s;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $c-btn-bg-active;
+    border-color: $c-btn-border-active;
+    color: $c-btn-font-active;
+  }
+  &:focus:not(:focus-visible),
+  &:focus:not(:active) {
+    outline: tint-color($c-btn-bg-active, 60%) solid 0.2em;
+  }
+  &:disabled {
+    cursor: default;
+    background-color: tint-color($c-btn-bg, 20%);
+    border-color: tint-color($c-btn-bg, 20%);
+    color: tint-color($c-btn-font, 20%);
+  }
+}
+
+$c-btn-pers-bg: #27ccd2;
+$c-btn-pers-border: #106164;
+$c-btn-pers-font: #ffffff;
+$c-btn-pers-bg-active: #ff9f1c;
+$c-btn-pers-border-active: #ff9f1c;
+$c-btn-pers-font-active: #ffffff;
+
+.btn-pers {
+  background-color: $c-btn-pers-bg; //colore di sfondo
+  border-color: $c-btn-pers-border;
+  color: $c-btn-pers-font;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $c-btn-pers-bg-active;
+    border-color: $c-btn-pers-border-active;
+    color: $c-btn-pers-font-active;
+  }
+  &:focus:not(:focus-visible),
+  &:focus:not(:active) {
+    outline-color: tint-color($c-btn-pers-bg-active, 60%);
+  }
+  &:disabled {
+    cursor: default;
+    background-color: tint-color($c-btn-pers-bg, 20%);
+    border-color: tint-color($c-btn-pers-bg, 20%);
+    color: tint-color($c-btn-pers-font, 20%);
+  }
+}
+
+.container-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.v {
+    flex-flow: column nowrap;
+  }
+  &.h {
+    flex-flow: row nowrap;
+  }
+}
