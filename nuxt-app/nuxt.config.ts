@@ -17,5 +17,6 @@ export default defineNuxtConfig({
       ],
     },
   },
+  //target: "server",
   css: ["@/assets/main.scss"],
 });

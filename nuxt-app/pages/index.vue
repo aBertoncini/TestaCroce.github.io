@@ -1,3 +1,10 @@
+<script setup>
+const route = useRoute();
+onMounted(() => {
+  console.log(route.query.order_id);
+});
+</script>
+
 <template>
   <div class="container container-center v">
     <NewButtonVue></NewButtonVue>
